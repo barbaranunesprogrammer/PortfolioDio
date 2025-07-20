@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+@font-face {
+   font-family: 'Neue Machina';
+   src: url('../fonts/NeueMachina-regular.otf');
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-image: url("../img/background/Desktop - 6.png");
+  background-size: cover;            /* Faz o background cobrir toda a tela */
+  background-repeat: no-repeat;      /* Não repete a imagem */
+  background-position: center center;/* Centraliza o background */
+  background-attachment: fixed;      /* Faz com que o fundo fique fixo ao rolar */
+  color: #fff;
+  min-height: 100vh;                 /* Garante que o body tenha ao menos o tamanho da tela */
+}
+
+.main {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  width: auto;
+  max-width: calc(100% - 2rem);
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  min-height: 200vh; /* força rolagem vertical */
+}
+@media (min-width: 768px) {
+    body {
+        background-size: 100% 100%; /* Faz a imagem esticar totalmente na largura e altura */
+        background-attachment: fixed; /* (opcional) fixa o fundo ao rolar */
+    }
+    .main{
+        max-width :1024px;
+        margin: 1rem auto;
+    }
+    .main::before{
+        width: 70vw;
+    }
+    .main::after{
+        width:70vw;
+    }
+}
