@@ -1,57 +1,59 @@
-.acordeon{
-    display:flex;
+.acordeon {
+    display: flex;
     flex-direction: column;
     width: 100%;
-    border-bottom: 1px solid #555;
-    margin-bottom: 1rem;
+    border: 2px solid #555;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
 }
-.acordeon::hover{
-    background-color: #555646;
-    border-color: #555646;
+
+.acordeon:hover,
+.acordeon.open {
+    background-color: #55569e;
+    border-color: #55569e;
 }
-.acordeon .trigger{
-    font-size: 1.25rem;
-    font-family: 'Neue Machina', sans-serif;
+
+.acordeon .trigger {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
+    align-items: center;
+    padding: 0.75rem 2rem;
     background-color: transparent;
-    color:#fff;
-    border:none;
+    color: #fff;
+    border: none;
     cursor: pointer;
     width: 100%;
-    text-align: left;
 }
-.acordeon .trigger::hover{
-    cursor:pointer;
 
-
-}
-.acordeon .trigger::after{
-    content:"";
-    display:inline-block;
+.acordeon .trigger::after {
+    content: "";
+    display: inline-block;
     width: 1.5rem;
     height: 1.5rem;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     background-image: url('../img/icons/arrow-down.svg');
-    transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;    
 }
 
 .acordeon.open .trigger::after {
-    transform: rotate(180deg);
+    transform: rotate(180deg);    
 }
-.acordeon .content{
+
+.acordeon .content {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transition: max-height .3s ease-out, opacity .3s ease-out;
+    margin: 0; /* Reseta a margem padrão da <ul> */
+    transition: all .3s ease-in-out;
 }
 
 .acordeon.open .content {
+    display: block;
     opacity: 1;
-    max-height: 500px; /* Ajuste se o conteúdo for muito grande */
+    max-height: 200px; /* Altura máxima para a animação. Ajuste se necessário. */
+    padding: 0 1rem 1rem 2rem;
 }
