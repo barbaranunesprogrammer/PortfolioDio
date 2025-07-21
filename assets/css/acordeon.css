@@ -2,17 +2,56 @@
     display:flex;
     flex-direction: column;
     width: 100%;
+    border-bottom: 1px solid #555;
+    margin-bottom: 1rem;
+}
+.acordeon::hover{
+    background-color: #555646;
+    border-color: #555646;
 }
 .acordeon .trigger{
-    font-size: 1rem;
+    font-size: 1.25rem;
+    font-family: 'Neue Machina', sans-serif;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
+    background-color: transparent;
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+.acordeon .trigger::hover{
+    cursor:pointer;
 
 
 }
+.acordeon .trigger::after{
+    content:"";
+    display:inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../img/icons/arrow-down.svg');
+    transition: transform .25s ease-in-out;
+}
+
+.acordeon.open .trigger::after {
+    transform: rotate(180deg);
+}
 .acordeon .content{
-    display:none;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height .3s ease-out, opacity .3s ease-out;
+}
+
+.acordeon.open .content {
+    opacity: 1;
+    max-height: 500px; /* Ajuste se o conteúdo for muito grande */
 }
