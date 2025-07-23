@@ -27,7 +27,7 @@ Como este é um projeto front-end estático, não há necessidade de instalaçã
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/barbaranunesprogrammer/portfolio-Dio.git
+    git clone https://github.com/barbaranunesprogrammer/PortfolioDio.git
     ```
   
   
