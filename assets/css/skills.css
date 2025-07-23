@@ -39,8 +39,8 @@
     }
   .skills .personal ul {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* ← duas colunas */
-  gap: 0.5rem 1.5rem;             /* espaçamento entre linhas e colunas */
+  grid-template-columns: 1fr 1fr; /
+  gap: 0.5rem 1.5rem;             
   margin: 0;
   padding: 0;
 
@@ -50,3 +50,4 @@
   padding: 0.5rem 0;
 }
 
+}
