@@ -1,0 +1,25 @@
+.experience {
+  margin:5rem;
+  padding: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha discreta entre experiências */
+}
+
+
+
+.period {
+  display: block;
+  font-weight: 500;
+  margin: 4px 0;
+  color: #e0e0e0;
+}
+
+.experience h4 {
+  margin: 0;
+  font-weight: 800;
+  color: #fff;
+}
+
+.experience p {
+  margin: 0;
+  color: #ddd;
+}

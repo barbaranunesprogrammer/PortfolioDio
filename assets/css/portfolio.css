@@ -1,0 +1,72 @@
+.portfolio {
+      width: 100%;
+  max-width: 100%;
+    padding: 0.3rem 0.8rem;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.portfolio li {
+    margin: 0.6rem 0;
+}
+
+.portfolio li .title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #fff;
+    word-break: break-word;
+    flex-wrap: wrap;
+    margin-bottom: .5rem;
+}
+
+.portfolio li img {
+    width: 18px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.portfolio a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.85rem;
+    word-break: break-word;
+    margin-top: 0.2rem;
+}
+
+/* Esconde o input do acordeon */
+.toggle {
+  display: none;
+}
+
+/* Estilo do botão (label) */
+.trigger {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Conteúdo fechado por padrão */
+.acordeon .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 1rem;
+}
+
+/* Quando o input está marcado (checked), mostra o conteúdo */
+.toggle:checked + .trigger + .content {
+  max-height: 1000px; /* altura grande o suficiente para expandir */
+  padding: 1rem;
+}
+
